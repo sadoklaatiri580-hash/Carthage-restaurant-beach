@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cb-red: #e3122b;
+  --color-cb-red-dark: #b60d21;
+  --color-cb-navy: #07192c;
+  --color-cb-navy-soft: #0f2a44;
+  --color-cb-sea: #1b6b8f;
+  --color-cb-sand: #f6efe4;
+  --color-cb-gold: #d9ab52;
+  --color-cb-ink: #0d1b2a;
+
+  --font-display: "Arial Black", "Segoe UI Black", "Helvetica Neue", Impact, sans-serif;
+  --font-body: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans Arabic", sans-serif;
+
+  --shadow-card: 0 12px 30px -18px rgba(7, 25, 44, 0.45);
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-cb-sand);
+  color: var(--color-cb-ink);
+  overscroll-behavior-y: none;
+}
+
+[dir="rtl"] body {
+  letter-spacing: 0;
+}
+
+.cb-hero-gradient {
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(27, 107, 143, 0.55) 0%, rgba(7, 25, 44, 0.9) 55%),
+    linear-gradient(180deg, rgba(7, 25, 44, 0.35) 0%, rgba(7, 25, 44, 0.95) 100%);
+}
+
+.cb-glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.cb-scroll-x {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.cb-scroll-x::-webkit-scrollbar {
+  display: none;
+}
+
+.cb-pattern {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(217, 171, 82, 0.35) 1px, transparent 0);
+  background-size: 18px 18px;
+}
+
+/* --- Impression des chevalets QR Code ---------------------------------- */
+@media print {
+  body {
+    background: #ffffff;
+  }
+  header,
+  nav,
+  footer,
+  .cb-no-print {
+    display: none !important;
+  }
+  main {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+  .cb-qr-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    border: 1px dashed #94a3b8 !important;
+    box-shadow: none !important;
+  }
+}
+
+.cb-input {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  padding: 0.7rem 1rem;
+  font-size: 0.875rem;
+  color: var(--color-cb-ink);
+  outline: none;
+  box-shadow: var(--shadow-card);
+}
+
+.cb-input:focus {
+  border-color: var(--color-cb-sea);
+  box-shadow: 0 0 0 3px rgba(27, 107, 143, 0.14);
+}
+
+@keyframes cb-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cb-animate {
+  animation: cb-fade-up 0.45s ease-out both;
+}
