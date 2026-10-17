@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <rect width="192" height="192" rx="40" fill="#07192c" />
+  <path d="M28 118 Q96 68 164 118" fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round" />
+  <g fill="#e3122b" transform="translate(96 40)">
+    <path d="M0 0 C-13 20 -13 40 0 57 C13 40 13 20 0 0 Z" />
+    <path d="M-20 12 C-34 29 -31 49 -14 60 C-7 44 -10 26 -20 12 Z" />
+    <path d="M20 12 C34 29 31 49 14 60 C7 44 10 26 20 12 Z" />
+    <path d="M-11 60 H11 L8 74 H-8 Z" />
+  </g>
+  <text x="96" y="160" text-anchor="middle" fill="#ffffff" font-family="Arial Black, Arial, sans-serif" font-size="26" font-weight="900" letter-spacing="1">CB</text>
+</svg>
